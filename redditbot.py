@@ -53,7 +53,7 @@ replied_threads = []
 # 2. if parent OP of mention is an image, call doppelbanger api
 try:
     for m in reddit.inbox.stream():
-        if m.was_comment and '/u/doppelbanger_ai' in m.body:
+        if m.was_comment and 'u/doppelbanger_ai' in m.body:
             c = reddit.comment(m.id)
             s = c.submission
             if s not in replied_threads:
